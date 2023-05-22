@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider, Box, Heading, Button } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Box p={4}>
+        <Heading size="lg" mb={4}>
+          Welcome to Chakra UI
+        </Heading>
+        <Button colorScheme="teal">Click me!</Button>
+      </Box>
+    </ChakraProvider>
   );
 }
 
